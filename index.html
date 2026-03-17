@@ -1,72 +1,144 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Portfólio Profissional | Fillipe Royer</title>
-<style>
-  body { font-family: 'Segoe UI', Arial, sans-serif; background:#111; color:#fff; margin:0; line-height: 1.6; }
-  header { background:#1a1a1a; padding:40px 20px; text-align:center; border-bottom: 2px solid #0af; }
-  nav { margin-top: 15px; }
-  nav a { color:#0af; margin:0 15px; text-decoration:none; font-weight:bold; transition: 0.3s; }
-  nav a:hover { color: #fff; }
-  
-  section { padding:40px 20px; max-width:1000px; margin:auto; }
-  h2 { border-left:5px solid #0af; padding-left:15px; margin-bottom: 30px; }
-  
-  .projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fillipe Royer | Desenvolvedor de Sistemas</title>
+  <style>
+    /* VARIAVEIS E BASE */
+    :root {
+      --primary: #0af;
+      --bg-dark: #111;
+      --card-bg: #1a1a1a;
+      --text-main: #fff;
+      --text-dim: #ccc;
+      --transition: 0.3s ease;
+    }
 
-  .project-card {
-    background:#222;
-    padding:20px;
-    border-radius:10px;
-    transition: transform 0.3s;
-    border: 1px solid #333;
-    display: flex;
-    flex-direction: column;
-  }
-  .project-card:hover { transform: translateY(-5px); border-color: #0af; }
+    body { 
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif; 
+      background: var(--bg-dark); 
+      color: var(--text-main); 
+      margin: 0; 
+      line-height: 1.6; 
+      scroll-behavior: smooth;
+    }
 
-  .project-img {
-    width:100%;
-    height:180px; 
-    object-fit: cover; 
-    border-radius:6px;
-    margin-bottom:15px;
-    background: #000;
-    display: block;
-  }
+    /* HEADER E NAVEGAÇÃO */
+    header { 
+      background: #000; 
+      padding: 60px 20px; 
+      text-align: center; 
+      border-bottom: 3px solid var(--primary); 
+    }
+    
+    nav { margin-top: 25px; }
+    nav a { 
+      color: var(--primary); 
+      margin: 0 15px; 
+      text-decoration: none; 
+      font-weight: bold; 
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      transition: var(--transition); 
+    }
+    nav a:hover { color: #fff; text-shadow: 0 0 10px var(--primary); }
 
-  h3 { margin-top: 0; color: #0af; font-size: 1.2rem; }
-  p { font-size: 0.95rem; color: #ccc; flex-grow: 1; }
+    /* SEÇÕES */
+    section { padding: 80px 20px; max-width: 1100px; margin: auto; }
+    h2 { 
+      border-left: 6px solid var(--primary); 
+      padding-left: 15px; 
+      margin-bottom: 40px; 
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
 
-  a.button {
-    display:inline-block;
-    margin-top:15px;
-    color:#111;
-    background:#0af;
-    padding:10px 20px;
-    text-decoration:none;
-    font-weight:bold;
-    border-radius:4px;
-    transition: 0.3s;
-    text-align: center;
-  }
-  a.button:hover { background: #fff; }
+    /* GRID DE PROJETOS */
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
 
-  .contact-links a { display:inline-block; color:#0af; margin-right: 20px; font-weight:bold; text-decoration: none; }
-  footer { text-align:center; padding:30px; background:#1a1a1a; margin-top:40px; color: #666; }
-</style>
+    .project-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #333;
+      transition: transform var(--transition), border-color var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card:hover { 
+      transform: translateY(-10px); 
+      border-color: var(--primary); 
+      box-shadow: 0 10px 30px rgba(0, 170, 255, 0.2);
+    }
+
+    /* AJUSTE DAS IMAGENS */
+    .project-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      object-position: top;
+      background: #222; /* Fundo caso a imagem falhe */
+      display: block;
+      transition: opacity var(--transition);
+    }
+
+    .project-content { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+    h3 { margin: 0 0 10px 0; color: var(--primary); font-size: 1.3rem; }
+    p { font-size: 0.95rem; color: var(--text-dim); margin-bottom: 20px; }
+
+    /* BOTÕES */
+    .button {
+      display: block;
+      width: fit-content;
+      margin-top: auto;
+      color: #111;
+      background: var(--primary);
+      padding: 10px 25px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: var(--transition);
+      text-align: center;
+    }
+
+    .button:hover { 
+      background: #fff; 
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(255,255,255,0.2);
+    }
+
+    /* CONTATO */
+    .contact-links a { 
+      display: inline-block; 
+      color: var(--primary); 
+      margin-right: 25px; 
+      font-weight: bold; 
+      text-decoration: none; 
+      font-size: 1.1rem;
+    }
+    
+    footer { text-align: center; padding: 40px; background: #000; color: #555; font-size: 0.9rem; }
+
+    /* RESPONSIVIDADE */
+    @media (max-width: 600px) {
+      header { padding: 40px 10px; }
+      h2 { font-size: 1.6rem; }
+    }
+  </style>
 </head>
 <body>
 
 <header>
-  <h1>Meu Portfólio Profissional</h1>
+  <h1>Fillipe Royer</h1>
+  <p style="color: #888; letter-spacing: 2px;">DESENVOLVEDOR DE SISTEMAS</p>
   <nav>
-    <a href="#sobre">Sobre Mim</a>
+    <a href="#sobre">Sobre</a>
     <a href="#habilidades">Habilidades</a>
     <a href="#projetos">Projetos</a>
     <a href="#contato">Contato</a>
@@ -75,92 +147,80 @@
 
 <section id="sobre">
   <h2>Sobre Mim</h2>
-  <img src="https://avatars.githubusercontent.com/u/176950555?v=4" alt="Fillipe Royer" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 3px solid #0af; margin-bottom: 20px;">
-  <p>Sou desenvolvedor de sistemas com experiência em desenvolvimento web, automação com Python e construção de soluções completas utilizando práticas modernas de programação.</p>
-  <p>Trabalho criando interfaces funcionais, APIs simples e scripts que resolvem problemas reais dentro de empresas.</p>
+  <div style="display: flex; align-items: center; gap: 30px; flex-wrap: wrap;">
+    <img src="https://avatars.githubusercontent.com/u/176950555?v=4" alt="Fillipe Royer" style="width: 160px; height: 160px; border-radius: 50%; border: 4px solid var(--primary); box-shadow: 0 0 20px rgba(0,170,255,0.3);">
+    <div style="flex: 1; min-width: 300px;">
+      <p>Desenvolvedor focado na criação de soluções robustas e funcionais. Especialista em interfaces web modernas e automação com Python.</p>
+      <p>Atualmente focado em arquitetura de sistemas persistentes e experiência do usuário (UX) intuitiva.</p>
+    </div>
+  </div>
 </section>
 
-<section id="habilidades">
-  <h2>Habilidades e Conhecimentos</h2>
-  <div style="display: flex; flex-wrap: wrap; gap: 40px;">
+<section id="habilidades" style="background: #151515; border-radius: 20px;">
+  <h2 style="margin-top: 0;">Habilidades Técnicas</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
     <div>
-      <h3>Frontend</h3>
-      <ul>
-        <li>HTML — Semântica e SEO</li>
-        <li>CSS — Grid, Flexbox e Responsividade</li>
-        <li>JavaScript — DOM e APIs</li>
+      <h3 style="color: #fff; font-size: 1.1rem;">⚡ Frontend</h3>
+      <ul style="color: var(--text-dim); list-style: none; padding: 0;">
+        <li>HTML5 Semântico</li>
+        <li>CSS3 (Flex/Grid)</li>
+        <li>JavaScript (ES6+)</li>
       </ul>
     </div>
     <div>
-      <h3>Backend e Automação</h3>
-      <ul>
-        <li>Python — Automação e ETL</li>
-        <li>SQL — MySQL e Modelagem</li>
-        <li>GitHub — Versionamento</li>
+      <h3 style="color: #fff; font-size: 1.1rem;">⚙️ Backend & Dados</h3>
+      <ul style="color: var(--text-dim); list-style: none; padding: 0;">
+        <li>Python Automação</li>
+        <li>SQL (MySQL)</li>
+        <li>Web Storage (LocalStorage)</li>
       </ul>
     </div>
   </div>
 </section>
 
 <section id="projetos">
-  <h2>Projetos Destaque</h2>
-  
+  <h2>Projetos em Destaque</h2>
   <div class="projects-container">
     <div class="project-card">
       <img src="https://i.ibb.co/Ngxj7b07/img1-jpg.png" class="project-img" alt="Portal Aprenda+">
-      <h3>Portal Aprenda+</h3>
-      <p>Plataforma educacional com cursos, conteúdos organizados e lógica de navegação estruturada.</p>
-      <a class="button" href="https://underline11.github.io/AprendaPlus/" target="_blank">Ver Projeto</a>
-    </div>
-
-    <div class="project-card">
-      <img src="https://i.ibb.co/xtCyfsdB/Captura-de-tela-2026-03-16-203209.png" class="project-img" alt="Jogo Brawl Stars">
-      <h3>Jogo Brawl Stars</h3>
-      <p>Landing page moderna com informações e dicas estratégicas sobre o jogo Brawl Stars.</p>
-      <a class="button" href="https://underline11.github.io/jogo-brawl-stars/" target="_blank">Ver Projeto</a>
+      <div class="project-content">
+        <h3>Portal Aprenda+</h3>
+        <p>Plataforma educacional com navegação estruturada e foco em usabilidade acadêmica.</p>
+        <a class="button" href="https://underline11.github.io/AprendaPlus/" target="_blank">Ver Projeto</a>
+      </div>
     </div>
 
     <div class="project-card">
       <img src="https://i.ibb.co/XxVMDKN6/Captura-de-tela-2026-03-16-210246.png" class="project-img" alt="Minha Lista">
-      <h3>Minha Lista</h3>
-      <p>Aplicação interativa para gerenciamento de itens com cálculo de preços em tempo real.</p>
-      <a class="button" href="https://underline11.github.io/chemical/" target="_blank">Ver Projeto</a>
+      <div class="project-content">
+        <h3>Minha Lista Pro</h3>
+        <p>Gestor de compras dinâmico com cálculos em tempo real e layout responsivo mobile-first.</p>
+        <a class="button" href="https://underline11.github.io/chemical/" target="_blank">Ver Projeto</a>
+      </div>
     </div>
 
     <div class="project-card">
       <img src="https://i.ibb.co/hJXpsZMf/Captura-de-tela-2026-03-16-221202.png" class="project-img" alt="Plataforma ONG">
-      <h3>Plataforma ONG</h3>
-      <p>Interface focada em projetos sociais, utilizando Machine Learning para análise de impacto.</p>
-      <a class="button" href="https://underline11.github.io/machine-learning-Projeto-Pr-tico/" target="_blank">Ver Projeto</a>
-    </div>
-
-    <div class="project-card">
-      <img src="https://i.ibb.co/Zz5gQX72/Captura-de-tela-2026-03-16-221724.png" class="project-img" alt="Web Moderno">
-      <h3>Web Moderno</h3>
-      <p>Página demonstrativa com foco em práticas avançadas de CSS, layouts escuros e interatividade.</p>
-      <a class="button" href="https://underline11.github.io/cooperative/" target="_blank">Ver Projeto</a>
-    </div>
-
-    <div class="project-card">
-      <img src="https://i.ibb.co/WNpnJW4D/Captura-de-tela-2026-03-16-221810.png" class="project-img" alt="Lista de Tarefas">
-      <h3>Lista de Tarefas (To-Do)</h3>
-      <p>Gerenciador de tarefas com filtros de status (Pendente/Concluída) e modo Dark/Light.</p>
-      <a class="button" href="https://underline11.github.io/shining/" target="_blank">Ver Projeto</a>
+      <div class="project-content">
+        <h3>Plataforma ONG</h3>
+        <p>Interface institucional para causas sociais com foco em conversão de voluntários.</p>
+        <a class="button" href="https://underline11.github.io/machine-learning-Projeto-Pr-tico/" target="_blank">Ver Projeto</a>
+      </div>
     </div>
   </div>
 </section>
 
 <section id="contato">
-  <h2>Contato</h2>
+  <h2>Vamos Conversar?</h2>
   <div class="contact-links">
     <a href="https://www.linkedin.com/in/fillipe-royer/" target="_blank">LinkedIn</a>
     <a href="https://github.com/underline11" target="_blank">GitHub</a>
-    <span>Email: Fillipe.dev.system@gmail.com</span>
+    <p style="margin-top: 20px; color: var(--text-dim);">Email: Fillipe.dev.system@gmail.com</p>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 — Fillipe Royer | Desenvolvedor de Sistemas</p>
+  <p>© 2026 Fillipe Royer | Construído com foco em performance e design.</p>
 </footer>
 
 </body>
