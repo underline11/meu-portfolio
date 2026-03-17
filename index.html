@@ -2,223 +2,165 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Portfólio Profissional</title>
+<title>Portfólio Profissional | Fillipe Royer</title>
 <style>
-body{
-  font-family: 'Roboto', Arial, sans-serif;
-  background:#111;
-  color:#eee;
-  margin:0;
-}
+  body { font-family: 'Segoe UI', Arial, sans-serif; background:#111; color:#fff; margin:0; line-height: 1.6; }
+  header { background:#1a1a1a; padding:40px 20px; text-align:center; border-bottom: 2px solid #0af; }
+  nav { margin-top: 15px; }
+  nav a { color:#0af; margin:0 15px; text-decoration:none; font-weight:bold; transition: 0.3s; }
+  nav a:hover { color: #fff; }
+  
+  section { padding:40px 20px; max-width:1000px; margin:auto; }
+  h2 { border-left:5px solid #0af; padding-left:15px; margin-bottom: 30px; }
+  
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+  }
 
-header{
-  background:#1a1a1a;
-  padding:25px;
-  text-align:center;
-  box-shadow:0 2px 6px rgba(0,0,0,0.5);
-}
+  .project-card {
+    background:#222;
+    padding:20px;
+    border-radius:10px;
+    transition: transform 0.3s;
+    border: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+  }
+  .project-card:hover { transform: translateY(-5px); border-color: #0af; }
 
-nav a{
-  color:#0af;
-  margin:0 12px;
-  text-decoration:none;
-  font-weight:bold;
-  transition:color 0.3s;
-}
-nav a:hover{
-  color:#fff;
-}
+  .project-img {
+    width:100%;
+    height:180px; 
+    object-fit: cover; 
+    border-radius:6px;
+    margin-bottom:15px;
+    background: #000;
+    display: block;
+  }
 
-section{
-  padding:40px 20px;
-  max-width:1000px;
-  margin:auto;
-}
+  h3 { margin-top: 0; color: #0af; font-size: 1.2rem; }
+  p { font-size: 0.95rem; color: #ccc; flex-grow: 1; }
 
-h2{
-  border-left:5px solid #0af;
-  padding-left:12px;
-  margin-bottom:20px;
-}
+  a.button {
+    display:inline-block;
+    margin-top:15px;
+    color:#111;
+    background:#0af;
+    padding:10px 20px;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:4px;
+    transition: 0.3s;
+    text-align: center;
+  }
+  a.button:hover { background: #fff; }
 
-ul{
-  line-height:1.8;
-}
-
-.project-card{
-  background:#1c1c1c;
-  padding:20px;
-  margin-bottom:20px;
-  border-radius:8px;
-  box-shadow:0 2px 8px rgba(0,0,0,0.4);
-  transition:transform 0.3s;
-}
-.project-card:hover{
-  transform:translateY(-5px);
-}
-
-.project-img{
-  width:100%;
-  height:200px;
-  background:#000;
-  border-radius:6px;
-  margin-bottom:12px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#777;
-  font-size:14px;
-}
-
-a.button{
-  display:inline-block;
-  margin-top:10px;
-  color:#111;
-  background:#0af;
-  padding:10px 14px;
-  text-decoration:none;
-  font-weight:bold;
-  border-radius:4px;
-  transition:background 0.3s;
-}
-a.button:hover{
-  background:#08c;
-}
-
-footer{
-  text-align:center;
-  padding:20px;
-  background:#1a1a1a;
-  margin-top:30px;
-  color:#aaa;
-}
-
-.contact-links a{
-  display:inline-block;
-  color:#0af;
-  margin:8px 12px;
-  font-weight:bold;
-  text-decoration:none;
-  transition:color 0.3s;
-}
-.contact-links a:hover{
-  color:#fff;
-}
-
-.sobre-img img{
-  width:160px;
-  height:160px;
-  border-radius:50%;
-  margin-bottom:20px;
-  border:3px solid #0af;
-  object-fit:cover;
-}
+  .contact-links a { display:inline-block; color:#0af; margin-right: 20px; font-weight:bold; text-decoration: none; }
+  footer { text-align:center; padding:30px; background:#1a1a1a; margin-top:40px; color: #666; }
 </style>
 </head>
 <body>
 
 <header>
-<h1>Meu Portfólio Profissional</h1>
-<nav>
- <a href="#sobre">Sobre Mim</a>
- <a href="#habilidades">Habilidades</a>
- <a href="#projetos">Projetos</a>
- <a href="#contato">Contato</a>
-</nav>
+  <h1>Meu Portfólio Profissional</h1>
+  <nav>
+    <a href="#sobre">Sobre Mim</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#contato">Contato</a>
+  </nav>
 </header>
 
 <section id="sobre">
-<h2>Sobre Mim</h2>
-
-<div class="sobre-img">
- <img src="https://drive.google.com/uc?export=view&id=1C14KjOY4awILqDn9h_pDv8rU9CzxovIZ" alt="Foto de Perfil">
-</div>
-
-<p>Sou desenvolvedor de sistemas com experiência em desenvolvimento web, automação com Python e construção de soluções completas utilizando práticas modernas de programação.</p>
-<p>Trabalho criando interfaces funcionais, APIs simples e scripts que resolvem problemas reais dentro de empresas.</p>
+  <h2>Sobre Mim</h2>
+  <img src="https://avatars.githubusercontent.com/u/176950555?v=4" alt="Fillipe Royer" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 3px solid #0af; margin-bottom: 20px;">
+  <p>Sou desenvolvedor de sistemas com experiência em desenvolvimento web, automação com Python e construção de soluções completas utilizando práticas modernas de programação.</p>
+  <p>Trabalho criando interfaces funcionais, APIs simples e scripts que resolvem problemas reais dentro de empresas.</p>
 </section>
 
 <section id="habilidades">
-<h2>Habilidades e Conhecimentos</h2>
-
-<h3>Frontend</h3>
-<ul>
- <li>HTML — semântica, acessibilidade básica, estrutura e SEO inicial</li>
- <li>CSS — responsividade, grid, flexbox, boas práticas de design</li>
- <li>JavaScript — manipulação do DOM, chamadas API, lógica de interação</li>
-</ul>
-
-<h3>Backend e Automação</h3>
-<ul>
- <li>Python — automação, ETL simples, requests, processamento de dados</li>
- <li>SQL — consultas, criação de tabelas, relacionamento básico</li>
-</ul>
-
-<h3>Ferramentas e práticas</h3>
-<ul>
- <li>VS Code</li>
- <li>GitHub — versionamento e portfólio</li>
- <li>Boas práticas de código e organização de projetos</li>
-</ul>
+  <h2>Habilidades e Conhecimentos</h2>
+  <div style="display: flex; flex-wrap: wrap; gap: 40px;">
+    <div>
+      <h3>Frontend</h3>
+      <ul>
+        <li>HTML — Semântica e SEO</li>
+        <li>CSS — Grid, Flexbox e Responsividade</li>
+        <li>JavaScript — DOM e APIs</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Backend e Automação</h3>
+      <ul>
+        <li>Python — Automação e ETL</li>
+        <li>SQL — MySQL e Modelagem</li>
+        <li>GitHub — Versionamento</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
 <section id="projetos">
-<h2>Projetos Destaque</h2>
+  <h2>Projetos Destaque</h2>
+  
+  <div class="projects-container">
+    <div class="project-card">
+      <img src="https://i.ibb.co/Ngxj7b07/img1-jpg.png" class="project-img" alt="Portal Aprenda+">
+      <h3>Portal Aprenda+</h3>
+      <p>Plataforma educacional com cursos, conteúdos organizados e lógica de navegação estruturada.</p>
+      <a class="button" href="https://underline11.github.io/AprendaPlus/" target="_blank">Ver Projeto</a>
+    </div>
 
-<div class="project-card">
- <div class="project-img">IMAGEM DO PROJETO</div>
- <h3>Portal Aprenda+</h3>
- <p>Plataforma educacional com cursos, conteúdos organizados e lógica de navegação estruturada.</p>
- <a class="button" href="https://github.com/underline11/Aprenda-/tree/main" target="_blank">Ver no GitHub</a>
-</div>
+    <div class="project-card">
+      <img src="https://i.ibb.co/xtCyfsdB/Captura-de-tela-2026-03-16-203209.png" class="project-img" alt="Jogo Brawl Stars">
+      <h3>Jogo Brawl Stars</h3>
+      <p>Landing page moderna com informações e dicas estratégicas sobre o jogo Brawl Stars.</p>
+      <a class="button" href="https://underline11.github.io/jogo-brawl-stars/" target="_blank">Ver Projeto</a>
+    </div>
 
-<div class="project-card">
- <div class="project-img">IMAGEM DO PROJETO</div>
- <h3>Jogo Brawl Stars</h3>
- <p>Informações e dicas sobre o jogo Brawl Stars.</p>
- <a class="button" href="https://github.com/underline11/jogo-brawl-stars" target="_blank">Ver no GitHub</a>
-</div>
+    <div class="project-card">
+      <img src="https://i.ibb.co/XxVMDKN6/Captura-de-tela-2026-03-16-210246.png" class="project-img" alt="Minha Lista">
+      <h3>Minha Lista</h3>
+      <p>Aplicação interativa para gerenciamento de itens com cálculo de preços em tempo real.</p>
+      <a class="button" href="https://underline11.github.io/chemical/" target="_blank">Ver Projeto</a>
+    </div>
 
-<div class="project-card">
- <div class="project-img">IMAGEM DO PROJETO</div>
- <h3>Classificação de flores</h3>
- <p>Projeto em Python usando Machine Learning para classificar espécies de flores com base no dataset Iris.</p>
- <a class="button" href="https://github.com/underline11/Classifica-o-flor" target="_blank">Ver no GitHub</a>
-</div>
+    <div class="project-card">
+      <img src="https://i.ibb.co/hJXpsZMf/Captura-de-tela-2026-03-16-221202.png" class="project-img" alt="Plataforma ONG">
+      <h3>Plataforma ONG</h3>
+      <p>Interface focada em projetos sociais, utilizando Machine Learning para análise de impacto.</p>
+      <a class="button" href="https://underline11.github.io/machine-learning-Projeto-Pr-tico/" target="_blank">Ver Projeto</a>
+    </div>
 
-<div class="project-card">
- <div class="project-img">IMAGEM DO PROJETO</div>
- <h3>Agrupamento de Clientes</h3>
- <p>Projeto em Python que agrupa clientes em segmentos usando K-Means.</p>
- <a class="button" href="https://github.com/underline11/agrupamento-de-clientes/tree/main" target="_blank">Ver no GitHub</a>
-</div>
+    <div class="project-card">
+      <img src="https://i.ibb.co/Zz5gQX72/Captura-de-tela-2026-03-16-221724.png" class="project-img" alt="Web Moderno">
+      <h3>Web Moderno</h3>
+      <p>Página demonstrativa com foco em práticas avançadas de CSS, layouts escuros e interatividade.</p>
+      <a class="button" href="https://underline11.github.io/cooperative/" target="_blank">Ver Projeto</a>
+    </div>
 
-<div class="project-card">
- <div class="project-img">IMAGEM DO PROJETO</div>
- <h3>Sistema de Gerenciamento de Biblioteca</h3>
- <p>Sistema simples de gerenciamento de biblioteca utilizando MySQL.</p>
- <a class="button" href="https://github.com/underline11/Sistema-de-Gerenciamento-de-Biblioteca-/tree/main" target="_blank">Ver no GitHub</a>
-</div>
-
-<div class="project-card">
- <div class="project-img">IMAGEM DO PROJETO</div>
- <h3>Automação com Python</h3>
- <p>Scripts que automatizam tarefas repetitivas e organizam dados de forma automática.</p>
- <a class="button" href="#" target="_blank">Ver no GitHub</a>
-</div>
+    <div class="project-card">
+      <img src="https://i.ibb.co/WNpnJW4D/Captura-de-tela-2026-03-16-221810.png" class="project-img" alt="Lista de Tarefas">
+      <h3>Lista de Tarefas (To-Do)</h3>
+      <p>Gerenciador de tarefas com filtros de status (Pendente/Concluída) e modo Dark/Light.</p>
+      <a class="button" href="https://underline11.github.io/shining/" target="_blank">Ver Projeto</a>
+    </div>
+  </div>
 </section>
 
 <section id="contato">
-<h2>Contato</h2>
-<div class="contact-links">
- <a href="https://www.linkedin.com/in/fillipe-royer/" target="_blank">LinkedIn</a>
- <a href="https://github.com/underline11" target="_blank">GitHub</a>
- <a href="mailto:Fillipe.dev.system@gmail.com">Email</a>
-</div>
+  <h2>Contato</h2>
+  <div class="contact-links">
+    <a href="https://www.linkedin.com/in/fillipe-royer/" target="_blank">LinkedIn</a>
+    <a href="https://github.com/underline11" target="_blank">GitHub</a>
+    <span>Email: Fillipe.dev.system@gmail.com</span>
+  </div>
 </section>
 
 <footer>
-<p>© 2025 — Portfólio Profissional</p>
+  <p>© 2026 — Fillipe Royer | Desenvolvedor de Sistemas</p>
 </footer>
 
 </body>
