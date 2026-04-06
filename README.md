@@ -1,1 +1,53 @@
-Portfólio Profissional - Fillipe Royer Dornelles. Este repositório centraliza o código-fonte do meu portfólio pessoal, apresentando projetos focados em desenvolvimento de sistemas, automação de processos e interfaces web modernas.Perfil ProfissionalDesenvolvedor de sistemas com foco em eficiência e escalabilidade. Experiência na construção de interfaces responsivas, automação de tarefas com Python e estruturação de dados com SQL, visando resolver problemas reais de negócio.Tecnologias e FerramentasCategoriaCompetênciasFrontendHTML5, CSS3 (Grid/Flexbox), JavaScript (ES6+)Backend e AutomaçãoPython (Scripts e ETL), Automação de ProcessosBanco de DadosSQL (MySQL), Modelagem RelacionalVersionamentoGit, GitHubProjetos Selecionados1. Portal Aprenda+Plataforma educacional desenvolvida com foco em arquitetura de informação e usabilidade.Competências Aplicadas: HTML semântico, organização de diretórios e navegação estruturada.2. Sistema de Gestão de Itens (Minha Lista)Aplicação para controle financeiro e gerenciamento de compras.Competências Aplicadas: Lógica de programação JavaScript, manipulação de eventos do DOM e cálculos aritméticos em tempo real.3. Autenticação e Persistência (Login)Módulo de cadastro e login com armazenamento de dados.Competências Aplicadas: Persistência de dados com localStorage, manipulação de objetos JSON e validação de formulários com Expressões Regulares (Regex).4. Gestão de Tarefas (To-Do List)Aplicação para produtividade com filtragem de estados.Competências Aplicadas: Gerenciamento de estado de interface e implementação de alternância de temas (Dark/Light Mode).Diferenciais TécnicosDesign Responsivo: Implementação de layouts que se adaptam a diferentes dispositivos e resoluções.Persistência de Dados: Uso de armazenamento local para garantir a continuidade da experiência do usuário.Arquitetura Clean: Código estruturado para facilitar a manutenção e leitura por outros desenvolvedores.Informações de ContatoLinkedIn: linkedin.com/in/fillipe-royerGitHub: github.com/underline11Email: Fillipe.dev.system@gmail.comDocumentação atualizada em 2026 por Fillipe Royer Dornelles
+#  Portfólio Profissional | Fillipe Royer Dornelles
+
+Este repositório centraliza o ecossistema do meu portfólio pessoal, apresentando uma curadoria de projetos focados em **Desenvolvimento de Sistemas**, **Automação de Processos** e **Data Intelligence**.
+
+---
+
+##  Perfil Profissional
+Desenvolvedor de sistemas orientado a resultados, com foco em eficiência operacional e escalabilidade. Experiência consolidada na construção de interfaces responsivas, automação de pipelines de dados (ETL) com Python e modelagem de bancos de dados relacionais para suporte a decisões de negócio.
+
+---
+
+##  Stack Tecnológica e Competências
+
+| Categoria | Tecnologias |
+| :--- | :--- |
+| **Frontend** | HTML5, CSS3 (Grid/Flexbox), JavaScript (ES6+), Mobile First Design |
+| **Backend & IA** | Python (Scripts de Automação), Java |
+| **Data Science** | Pandas, Numpy |
+| **Banco de Dados** | SQL (MySQL), Modelagem Relacional, Operações CRUD |
+| **Ferramentas** | GitHub, VS Code, Ambientes Virtuais |
+
+---
+
+##  Projetos em Destaque
+
+### 1.  Portal Aprenda+
+Plataforma educacional com foco em arquitetura de informação.
+* **Diferencial:** Navegação estruturada e uso de HTML semântico para SEO e acessibilidade.
+
+### 2.  Sistema de Gestão "Minha Lista"
+Aplicação para controle financeiro e gerenciamento de compras em tempo real.
+* **Diferencial:** Lógica avançada em JS para manipulação de eventos do DOM e cálculos aritméticos dinâmicos.
+
+### 3.  Módulo de Autenticação e Persistência
+Sistema de login e cadastro com validação rigorosa.
+* **Diferencial:** Persistência de dados via `localStorage` e uso de **Regex** para validação de segurança no client-side.
+
+### 4.  Analisador de Séries Temporais (IA)
+Modelo preditivo para o mercado financeiro (Ações Walmart).
+* **Diferencial:** Comparação técnica entre modelos estatísticos (**ARIMA**) e redes neurais recorrentes (**LSTM**).
+
+---
+
+##  Diferenciais Técnicos
+* **Clean Code:** Código estruturado para facilitar a manutenção e escalabilidade.
+* **UX/UI Responsivo:** Interfaces que garantem a continuidade da experiência em qualquer dispositivo.
+* **Data Driven:** Foco na transformação de dados brutos em dashboards e insights visuais.
+
+---
+
+##  Contato e Conexões
+* **LinkedIn:** [linkedin.com/in/fillipe-royer](https://www.linkedin.com/in/fillipe-royer/)
+* **Email:** [Fillipe.dev.system@gmail.com](mailto:Fillipe.dev.system@gmail.com)
